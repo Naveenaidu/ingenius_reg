@@ -2,25 +2,25 @@ import os
 
 from ingenius.settings.base import *
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
-ALLOWED_HOSTS += [os.environ['DJANGO_HOST_NAME']]
+#ALLOWED_HOSTS += [os.environ['DJANGO_HOST_NAME']]
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ['DBNAME'],
-        'USER': os.environ['DBUSER'],
-        'PASSWORD': os.environ['DBPASS'],
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'reg',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': ''
     }
 }
 
 
-STATIC_ROOT = os.environ['STATIC_ROOT']
+STATIC_ROOT = os.environ.get('STATIC_ROOT','None')
