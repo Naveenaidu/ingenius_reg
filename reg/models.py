@@ -38,7 +38,7 @@ class Participant(models.Model):
     )
     participant_id = models.CharField(max_length=10, unique=True)
     name = models.CharField(max_length=50)
-    gender = models.CharField(max_length=1)
+    gender = models.CharField(max_length=6)
     team = models.ForeignKey(Team, related_name='participants')
     phone = models.CharField(max_length=15)
     email = models.EmailField()

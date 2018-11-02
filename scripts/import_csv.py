@@ -42,7 +42,7 @@ def main():
             )
 
             no_of_p = int(item[1])
-            print(item[1])
+            print(item[0] + " " + item[1])
             participant_count += no_of_p
 
             p1 = Participant.objects.create(
