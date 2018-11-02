@@ -2,9 +2,9 @@ import os
 
 from ingenius.settings.base import *
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','13.233.113.196']
 
 #ALLOWED_HOSTS += [os.environ['DJANGO_HOST_NAME']]
 
@@ -15,7 +15,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'reg',
-        'USER': 'admin',
+        'USER': 'root',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': ''
@@ -23,4 +23,5 @@ DATABASES = {
 }
 
 
-STATIC_ROOT = os.environ.get('STATIC_ROOT','None')
+#STATIC_ROOT = os.environ.get('STATIC_ROOT',None)
+#STATIC_ROOT = os.path.join(BASE_DIR,"static")
